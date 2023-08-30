@@ -35,6 +35,20 @@ document.addEventListener("DOMContentLoaded", function(){
         g+=3
     })
 
+    prevButton.addEventListener("mouseover",function(){
+        prevButton.style.transform ="scale(1.2)"
+    })
+    prevButton.addEventListener("mouseout",function(){
+        prevButton.style.transform ="scale(1)"
+    })
+
+    nextButton.addEventListener("mouseover",function(){
+        nextButton.style.transform ="scale(1.2)"
+    })
+    nextButton.addEventListener("mouseout",function(){
+        nextButton.style.transform ="scale(1)"
+    })
+
     nextButton.addEventListener("click",function(){
         if (g==1){
             console.log("g=1")
