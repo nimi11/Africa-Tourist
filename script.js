@@ -42,6 +42,30 @@ document.addEventListener("DOMContentLoaded", function(){
         prevButton.style.transform ="scale(1)"
     })
 
+    prevButton.addEventListener("click",function(){
+        if(g==1){
+            console.log("g=1")
+            firstSite.classList.add("hidden")
+            thirdSite.classList.remove("hidden");
+            thirdSite.scrollIntoView({behavior:"smooth"})
+            g=3
+        }else if(g==2){
+            console.log("g==2")
+            secondSite.classList.add("hidden")
+            firstSite.classList.remove("hidden")
+            firstSite.scrollIntoView({behavior:"smooth"})
+            g=1
+
+        }else if(g==3){
+            console.log("g==3")
+            thirdSite.classList.add("hidden")
+            secondSite.classList.remove("hidden")
+            secondSite.scrollIntoView({behavior:"smooth"})
+            g=2
+
+        }
+    })
+
     nextButton.addEventListener("mouseover",function(){
         nextButton.style.transform ="scale(1.2)"
     })
