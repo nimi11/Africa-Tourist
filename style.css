@@ -101,7 +101,7 @@ a:hover{
 }
 
 .gallery-item img {
-    width: 350px;
+    width: 300px;
     height: 300px;
     display: block;
     border: 1px solid #ddd;
@@ -118,6 +118,25 @@ a:hover{
     font-size: 14px;
     text-align: center;
 }
+#prev-arrow, #next-arrow {
+    cursor: pointer;
+    position: relative;
+     top: 130px;
+     
+     width: auto; 
+ 
+    padding: 16px;
+    color: green;
+    font-weight: bold;
+    font-size: 38px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  #next-arrow {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
 
 .site{
     margin-top:100px ;
@@ -140,16 +159,16 @@ a:hover{
  color: var(--links-hover);
 }
 
-#second-site img{
+.tour-site img{
     width: 650px;
     height: 370px;
 
     
 }
-#third-site img{
+/* #third-site img{
     width:650px ;
     height: 370px;
-}
+} */
 
 .hidden{
     display:none;
