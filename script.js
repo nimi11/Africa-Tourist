@@ -1,6 +1,11 @@
-
-
 document.addEventListener("DOMContentLoaded", function(){
+
+
+   
+
+
+
+
     const g1 = document.getElementById("g-1");
     const g2= document.getElementById("g-2");
     const g3 = document.getElementById("g-3");
@@ -212,34 +217,68 @@ document.addEventListener("DOMContentLoaded", function(){
     prevButton.addEventListener("mouseout",function(){
         prevButton.style.transform ="scale(1)"
     })
-    prevButton.addEventListener("click",function(){
-        if(g==1){
-            console.log("g=1")
-            secondSite.classList.add("hidden")
-            firstSite.classList.add("hidden")
+    
+    prevButton.addEventListener("click", function () {
+        if (g == 1) {
+            firstSite.classList.add("hidden");
+            ninthSite.classList.remove("hidden");
+            ninthSite.scrollIntoView({ behavior: "instant" });
+            console.log(g)
+            g = 9;
+        } else if (g == 2) {
+            secondSite.classList.add("hidden");
+            firstSite.classList.remove("hidden");
+            firstSite.scrollIntoView({ behavior: "instant" });
+            console.log(g)
+            g--;
+        } else if (g == 3) {
+            thirdSite.classList.add("hidden");
+            secondSite.classList.remove("hidden");
+            secondSite.scrollIntoView({ behavior: "instant" });
+            console.log(g)
+            g--;
+        } else if (g == 4) {
+            fourthSite.classList.add("hidden");
             thirdSite.classList.remove("hidden");
-            thirdSite.scrollIntoView({behavior:"smooth"})
-            g=3
-        }else if(g==2){
-            console.log("g==2")
-            thirdSite.classList.add("hidden")
-            secondSite.classList.add("hidden")
-            firstSite.classList.remove("hidden")
-            firstSite.scrollIntoView({behavior:"smooth"})
-            g=1
-
-        }else if(g==3){
+            thirdSite.scrollIntoView({ behavior: "instant" });
             console.log(g)
-            firstSite.classList.add("hidden")
-            thirdSite.classList.add("hidden")
-            secondSite.classList.remove("hidden")
-            secondSite.scrollIntoView({behavior:"smooth"})
-            g=2
-
-        }else{
+            g--;
+        } else if (g == 5) {
+            fifthSite.classList.add("hidden");
+            fourthSite.classList.remove("hidden");
+            fourthSite.scrollIntoView({ behavior: "instant" });
             console.log(g)
+            g--;
+        } else if (g == 6) {
+            sixthSite.classList.add("hidden");
+            fifthSite.classList.remove("hidden");
+            fifthSite.scrollIntoView({ behavior: "instant" });
+            console.log(g)
+            g--;
+        } else if (g == 7) {
+            seventhSite.classList.add("hidden");
+            sixthSite.classList.remove("hidden");
+            sixthSite.scrollIntoView({ behavior: "instant" });
+            console.log(g)
+            g--;
+        } else if (g == 8) {
+            eightSite.classList.add("hidden");
+            seventhSite.classList.remove("hidden");
+            seventhSite.scrollIntoView({ behavior: "instant" });
+            console.log(g)
+            g--;
+        } else if (g == 9) {
+            ninthSite.classList.add("hidden");
+            eightSite.classList.remove("hidden");
+            eightSite.scrollIntoView({ behavior: "instant" });
+            console.log(g)
+            g--;
         }
-    })
+    });
+
+
+
+
 
     nextButton.addEventListener("mouseover",function(){
         nextButton.style.transform ="scale(1.2)"
@@ -249,28 +288,57 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 
     nextButton.addEventListener("click",function(){
-        if (g==1){
+         if (g==1){
             console.log(g)
             firstSite.classList.add("hidden");
             secondSite.classList.remove("hidden");
-            secondSite.scrollIntoView({behavior:"smooth"});
+            secondSite.scrollIntoView({behavior:"instant"});
             g++
             console.log(g)
         }else if(g==2){
             console.log("g=2")
             secondSite.classList.add("hidden")
             thirdSite.classList.remove("hidden")
-            thirdSite.scrollIntoView({behavior:"smooth"})
+            thirdSite.scrollIntoView({behavior:"instant"})
             g++
             console.log(g)
         }else if (g==3){
             console.log("g==3")
             thirdSite.classList.add("hidden")
+            fourthSite.classList.remove("hidden")
+            fourthSite.scrollIntoView({behavior:"instant"})
+            g++
+        }else if(g==4){
+            console.log("g==4")
+            fourthSite.classList.add("hidden")
+            fifthSite.classList.remove("hidden")
+            fifthSite.scrollIntoView({behavior:"instant"})
+            g++}
+        else if(g==5){
+            fifthSite.classList.add("hidden")
+            sixthSite.classList.remove("hidden")
+            sixthSite.scrollIntoView({behavior:"instant"})
+            g++
+        }else if (g==6){
+            sixthSite.classList.add("hidden")
+            seventhSite.classList.remove("hidden")
+            seventhSite.scrollIntoView({behavior:"instant"})
+            g++
+        }else if(g==7){
+            seventhSite.classList.add("hidden")
+            eightSite.classList.remove("hidden")
+            eightSite.scrollIntoView({behavior:"instant"})
+            g++
+        }else if (g==8){
+            eightSite.classList.add("hidden")
+            ninthSite.classList.remove("hidden")
+            ninthSite.scrollIntoView({behavior:"instant"})
+            g++
+        }else if (g==9){
+            ninthSite.classList.add("hidden")
             firstSite.classList.remove("hidden")
-            firstSite.scrollIntoView({behavior:"smooth"})
+            firstSite.scrollIntoView({behavior:"instant"})
             g=1
-        }else{
-            console.log(g)
         }
     })
 

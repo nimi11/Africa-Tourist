@@ -64,14 +64,14 @@ a:hover{
     line-height: 1.35;
     font-size: 20px;
 }
-/* Your existing CSS styles */
+
 #first-section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #first-image{
-   width: 500px;
+   width: 600px;
    margin-right: 10px;
    flex-basis: 2;
    margin-bottom: 10px;
@@ -143,6 +143,25 @@ a:hover{
   #prev-arrow:hover{
     background-color:rgba(0,0,0,0.8) ;
   }
+  .map-container{
+    display: flex;
+    margin-top: 20px;
+    margin-left:25%;
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid green;
+  }
+  .map{
+    
+    width: 500px;
+    height: 300px;
+    border: 3px solid green;
+ 
+
+  }
 
 .site{
     margin-top:100px ;
@@ -181,17 +200,42 @@ a:hover{
  }
 
 .button{
-    padding:25px;
+    /* padding:25px;
     border-radius: 15px;
     height:60px;
-    width:120px;
-    background-color: var(--button);
+    width:120px; */
+        box-shadow: 0px 4px 0px 1px #1564ad;
+        background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+        background-color:#79bbff;
+        border-radius:12px;
+        border:1px solid #337bc4;
     
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:17px;
+        font-weight:bold;
+        padding:12px 44px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #528ecc;
+        background-color: var(--button);
 }
-#button{
+    
+.button:hover {
+        background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+        background-color:#378de5;
+    }
+.button:active {
+        position:relative;
+        top:1px;
+    }
+    
+    
+
+#button-container{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
     margin-top: 60px;
 }
 .footer {
